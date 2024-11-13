@@ -1,6 +1,6 @@
-# Module 2 Project Based on the Starter Projcet with additional functions
+# Module 2 Project Based on the Starter Project with additional functions
 
-# WHat are the changes? 
+# What are the changes? 
 i Added a input Text place holder together with the transaction balance and date time history then the clear button to be able to clear the screen of the history itself.
 
 # Starter Next/Hardhat Project
