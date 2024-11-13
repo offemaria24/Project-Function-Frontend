@@ -15,9 +15,26 @@ async function main() {
   console.log(`A contract with balance of ${initBalance} eth deployed to ${assessment.address}`);
 }
 
+const getATMContract = async () => {
+  const provider = new ethers.providers.Web3Provider(ethWallet);
+  const signer = provider.getSigner();
+  const atmContract = new ethers.Contract(contractAddress,   
+ atmABI, signer);
+
+  setATM(atmContract);   
+
+  // Fetch past events
+  const filter = atmContract.filters.Transaction();
+  const events = await atmContract.queryFilter(filter);
+
+  // Process and store the events for later display
+  setTransactionHistory(events);
+};
+
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
+                    
