@@ -1,3 +1,7 @@
+#Module 2 Project Based on the Starter Projcet with additional functions
+
+#Added a input Text place holder together with the transaction balance and date time history then the clear button to be able to clear the screen of the history itself.
+
 # Starter Next/Hardhat Project
 
 After cloning the github, you will want to do the following to get the code running on your computer.
